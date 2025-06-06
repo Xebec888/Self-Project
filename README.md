@@ -12,5 +12,6 @@ This project implements a Convolutional Neural Network (CNN) using TensorFlow/Ke
 It is suitable for datasets such as CIFAR-10 or any similarly structured dataset loaded from Python pickle files.
 
 scilearn.py
+
 This project performs binary sentiment classification (positive/negative) on Amazon product reviews using scikit-learn's Logistic Regression and the Bag-of-Words (BoW) model for text vectorization. It includes model training, evaluation, and prediction on new reviews.
 
