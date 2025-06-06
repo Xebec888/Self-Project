@@ -71,33 +71,3 @@ print(f'Accuracy: {accuracy:.4f}')
 #saving the model
 model.save('current_directory.h5 ')
 
-"""This is used for classifying image datasets separate into multiple folders (cats , dogs)
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-
-datagen = ImageDataGenerator(rescale=1./255, validation_split=0.2)
-
-train_gen = datagen.flow_from_directory(
-    'data',            # root folder
-    target_size=(32, 32),
-    batch_size=32,
-    class_mode='categorical',
-    subset='training'
-)
-
-val_gen = datagen.flow_from_directory(
-    'data',
-    target_size=(32, 32),
-    batch_size=32,
-    class_mode='categorical',
-    subset='validation'
-)
-"""
-
-"""To find the shape of image
-import cv2
-
-img = cv2.imread('path/to/image.jpg')
-height, width, channels = img.shape
-
-print(f"Image size: {width}x{height}, Channels: {channels}")
-"""
