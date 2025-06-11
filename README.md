@@ -15,6 +15,6 @@ scilearn.py
 
 This project performs binary sentiment classification (positive/negative) on Amazon product reviews using scikit-learn's Logistic Regression and the Bag-of-Words (BoW) model for text vectorization. It includes model training, evaluation, and prediction on new reviews.
 
-# Market Basket Analysis with Apriori Algorithm (market basket analysis.py)
+Market Basket Analysis with Apriori Algorithm (market_basket_analysis.py)
 
 This project implements Market Basket Analysis using the Apriori algorithm to identify frequent itemsets and association rules from transaction data. It leverages Python libraries like `mlxtend`, `pandas`, `matplotlib`, and `numpy` to preprocess data, generate rules, visualize patterns, and derive actionable insights such as recommendations and discount planning.
