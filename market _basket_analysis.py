@@ -7,6 +7,15 @@ from mlxtend.frequent_patterns import apriori
 from mlxtend.frequent_patterns import association_rules
 from functools import reduce
 
+""" Dataset: A sample list of transactions consisting of common grocery items.
+- Goal: Discover frequently bought together items and generate business strategies such as recommendations and discounts.
+- Techniques:
+  - Apriori Algorithm for frequent itemsets
+  - Association rules with confidence and lift metrics
+  - Heatmap visualization of rule strength
+  - Item recommendation engine
+  - Discount planning based on association logic """
+
 # These settings ensure that the full DataFrame is shown
 pd.set_option('display.max_columns', None)  # Show all columns
 pd.set_option('display.max_rows', None)     # Show all rows
