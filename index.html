@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browser Task Runner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9fbfd;
+            color: #333;
+            max-width: 600px;
+            margin: 60px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 0.85em;
+            text-align: center;
+            color: #777;
+        }
+    </style>
+    <script>
+        async function handleAutomation(event) {
+            event.preventDefault();
+            const formData = new FormData(document.getElementById("automationForm"));
+            const response = await fetch("/automate", {
+                method: "POST",
+                body: formData
+            });
+            const result = await response.json();
+            document.getElementById("taskResult").innerText = JSON.stringify(result.output, null, 2);
+        }
+    </script>
+</head>
+<body>
+    <h2>Browser Task Runner</h2>
+    <form id="automationForm" onsubmit="handleAutomation(event)">
+        <input type="text" name="task" placeholder="e.g., check email, open calendar" required>
+        <button type="submit">Run Automation</button>
+    </form>
+    <pre id="taskResult">Your task result will appear here...</pre>
+
+    <footer>
+        🚀 Built by Md Raju · Flask & Python Web Automation Demo
+    </footer>
+</body>
+</html>
